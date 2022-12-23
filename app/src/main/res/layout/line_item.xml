@@ -14,6 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="1dp"
-        android:textSize="16sp"
+        android:textSize="22sp"
         tools:text="Straight fit pants" />
 </androidx.cardview.widget.CardView>
