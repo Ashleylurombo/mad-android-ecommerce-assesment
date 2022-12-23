@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MAD Android Test Solutions</string>
+    <string name="no_new_items">No new items available</string>
+    <string name="category_screen_heading">Please select a category</string>
 </resources>

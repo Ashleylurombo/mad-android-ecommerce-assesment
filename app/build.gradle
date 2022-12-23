@@ -2,11 +2,16 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("com.apollographql.apollo3").version("3.7.2")
+    id 'kotlin-kapt'
 }
 
 android {
     namespace 'mad.app.madandroidtestsolutions'
     compileSdk 33
+    compileOptions {
+        sourceCompatibility(JavaVersion.VERSION_1_8)
+        targetCompatibility(JavaVersion.VERSION_1_8)
+    }
 
     defaultConfig {
         applicationId "mad.app.madandroidtestsolutions"
@@ -34,6 +39,7 @@ android {
 
     buildFeatures {
         compose true
+        viewBinding = true
     }
 
     composeOptions {
@@ -43,12 +49,21 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.apollographql.apollo3:apollo-runtime:3.7.2'
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation 'com.github.orangegangsters:swipy:1.2.3@aar'
+    implementation 'com.github.Zhuinden:fragmentviewbindingdelegate-kt:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 
     //Jetpack Compose
     def composeBom = platform('androidx.compose:compose-bom:2022.10.00')
